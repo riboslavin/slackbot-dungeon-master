@@ -8,6 +8,8 @@
   },
   "author": "",
   "license": "BSD-2-Clause",
-  "express": "^4.x.x",
-  "body-parser": "^1.x.x"
+  "dependencies": {
+    "express": "^4.x.x",
+    "body-parser": "^1.x.x"
+  }
 }
