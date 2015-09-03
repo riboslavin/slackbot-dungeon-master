@@ -1,6 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var hellobot = require('./hellobot');
+var dicebot = require('./dicebot');
 
 var app = express();
 var port = process.env.PORT || 3000;
@@ -21,5 +22,8 @@ app.listen(port, function () {
   console.log('Slack bot listening on port ' + port);
 });
 
-// hello test
+// hello bot
 app.post('/hello', hellobot);
+
+// dicebot
+app.post('/jackroll', dicebot);
