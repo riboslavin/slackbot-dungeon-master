@@ -26,4 +26,4 @@ app.listen(port, function () {
 app.post('/hello', hellobot);
 
 // dicebot
-app.post('/jackroll', dicebot);
+app.post('/roll', dicebot);
