@@ -5,17 +5,21 @@ module.exports = function (req, res, next) {
   var matches;
   var times = 2;
   var die = 6;
+  var addition = 0;
   var rolls = [];
   var total = 0;
   var botPayload = {};
 
   if (req.body.text) {
     // parse roll type if specified
-    matches = req.body.text.match(/^(\d{1,2})d(\d{1,3})$/);
+    matches = req.body.text.match(/^(\d{1,2})d(\d{1,3})(\+(\d{1,2}))?$/);
 
     if (matches && matches[1] && matches[2]) {
       times = matches[1];
       die = matches[2];
+      if (matches[4]) {
+      	addition = matches[4]
+      }
 
     } else {
       // send error message back to user if input is bad
@@ -30,9 +34,14 @@ module.exports = function (req, res, next) {
     total += currentRoll;
   }
 
+  //add addition if non-zero
+  if (addition != 0) {
+  	total += addition;
+  }
+
   // write response message and add to payload
-  botPayload.text = req.body.user_name + ' rolled ' + times + 'd' + die + ':\n' +
-                    rolls.join(' + ') + ' = *' + total + '*';
+  botPayload.text = req.body.user_name + ' rolled ' + times + 'd' + die + '+' + addition + ':\n' +
+                    rolls.join(' + ') + ' + ' + addition + ' = *' + total + '*';
 
   botPayload.username = 'dicebot';
   botPayload.channel = req.body.channel_id;
