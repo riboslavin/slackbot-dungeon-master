@@ -23,7 +23,7 @@ module.exports = function (req, res, next) {
 
     } else {
       // send error message back to user if input is bad
-      return res.status(200).send('<number>d<sides>');
+      return res.status(200).send('<number>d<sides>(+<constant>)');
     }
   }
 
