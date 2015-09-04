@@ -34,10 +34,8 @@ module.exports = function (req, res, next) {
     total += currentRoll;
   }
 
-  //add addition if non-zero
-  if (addition != 0) {
-  	total += addition;
-  }
+  //add addition
+  total+=addition;
 
   // write response message and add to payload
   botPayload.text = req.body.user_name + ' rolled ' + times + 'd' + die + '+' + addition + ':\n' +
