@@ -18,7 +18,7 @@ module.exports = function (req, res, next) {
       times = matches[1];
       die = matches[2];
       if (matches[4]) {
-      	addition = matches[4]
+      	addition = parseInt(matches[4])
       }
 
     } else {
