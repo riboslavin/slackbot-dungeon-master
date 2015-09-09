@@ -5,7 +5,8 @@ module.exports = function (req, res, next) {
   var matches;
   var times = 2;
   var die = 6;
-  var addition = 0;
+  var constant = 0;
+  var symbol = "+"
   var rolls = [];
   var total = 0;
   var botPayload = {};
@@ -18,15 +19,16 @@ module.exports = function (req, res, next) {
       times = matches[1];
       die = matches[2];
       if (matches[4]) {
-      	if //add different behavior if plus or minus
+      	if (matches[4] === "-")
+      		symbol = "-";
       }
       if (matches[5]) {
-      	addition = parseInt(matches[4])
+      	constant = parseInt(matches[5])
       }
 
     } else {
       // send error message back to user if input is bad
-      return res.status(200).send('<number>d<sides>(+<constant>)');
+      return res.status(200).send('<number>d<sides>(+/-<constant>)');
     }
   }
 
@@ -37,12 +39,15 @@ module.exports = function (req, res, next) {
     total += currentRoll;
   }
 
-  //add addition
-  total+=addition;
+  //add constant
+  if (symbol === "-")
+  	total = total - constant;
+  else
+  	total = total + constant;
 
   // write response message and add to payload
-  botPayload.text = req.body.user_name + ' rolled ' + times + 'd' + die + '+' + addition + ':\n' +
-                    rolls.join(' + ') + ' + ' + addition + ' = *' + total + '*';
+  botPayload.text = req.body.user_name + ' rolled ' + times + 'd' + die + symbol + constant + ':\n' +
+                    rolls.join(' + ') + ' ' + symbol + ' ' + constant + ' = *' + total + '*';
 
   botPayload.username = 'dicebot';
   botPayload.channel = req.body.channel_id;
