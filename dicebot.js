@@ -12,12 +12,15 @@ module.exports = function (req, res, next) {
 
   if (req.body.text) {
     // parse roll type if specified
-    matches = req.body.text.match(/^(\d{1,2})d(\d{1,3})(\+(\d{1,2}))?$/);
+    matches = req.body.text.match(/^(\d{1,2})d(\d{1,3})((\+|\-)(\d{1,2}))?$/);
 
     if (matches && matches[1] && matches[2]) {
       times = matches[1];
       die = matches[2];
       if (matches[4]) {
+      	if //add different behavior if plus or minus
+      }
+      if (matches[5]) {
       	addition = parseInt(matches[4])
       }
 
