@@ -4,7 +4,7 @@ var fs = require('fs');
 module.exports = function (req, res, next) {
   // constants
   var command = "Derfin"; //default command lists Derfin's spells
-  var output = "Default output";
+  var output = "Character or spell not found.";
   var obj = JSON.parse(fs.readFileSync('spellbook.json', 'utf8'));
   var botPayload = {};
 
@@ -17,7 +17,7 @@ module.exports = function (req, res, next) {
       command = matches[1];
     } else {
       // send error message back to user if input is bad
-      return res.status(200).send('Character or spell not found.');
+      return res.status(200).send('Enter a single character name or spell name, case-sensitive.');
     }
   }
   
