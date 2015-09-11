@@ -3,7 +3,9 @@ var fs = require('fs');
 
 module.exports = function (req, res, next) {
   // constants
-  var command = "Derfin";
+  var command = "Derfin"; //default command lists Derfin's spells
+  var output = "Default output";
+  var obj = JSON.parse(fs.readFileSync('spellbook.json', 'utf8'));
 
   if (req.body.text) {
     // regex match
@@ -14,8 +16,15 @@ module.exports = function (req, res, next) {
       command = matches[1];
     } else {
       // send error message back to user if input is bad
-      return res.status(200).send('Character name or spell name, case insensitive');
+      return res.status(200).send('Character or spell not found.');
     }
+  }
+  
+  //define individual command behavior
+  switch (command) {
+    case "Derfin":
+      output = obj.spellbook.Derfin.1 + '\n';
+      break;
   }
 
   // write response message and add to payload
