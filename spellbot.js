@@ -29,11 +29,10 @@ module.exports = function (req, res, next) {
       break;
     case "Jack":
       output = "";
-      for (var i = 0, len = obj.spellbook.Jack.length; i < len; i++) {
-        level = obj.spellbook.Jack[i];
+      for (var level in obj.spellbook.Jack) {
         output += level + ":\n";
-        for (var j = 0, len2 = obj.spellbook.Jack.level.length; j < len2; j++) {
-          output += obj.spellbook.Jack.level[j] + "\n";
+        for (var spell in obj.spellbook.Jack.level) {
+          output += spell + "\n";
         }
       }
       break;
