@@ -27,9 +27,10 @@ module.exports = function (req, res, next) {
       output = "";
       for (var level in obj.spellbook.Derfin) {
         output += "Level " + level + ":\n";
-        for (var spell in obj.spellbook.Derfin[level]) {
-          output += spell + "\n";
-        }
+        output += obj.spellbook.Derfin.One;
+        //for (var spell in obj.spellbook.Derfin[level]) {
+        //  output += spell + "\n";
+        //}
       }
       break;
     case "Jack":
