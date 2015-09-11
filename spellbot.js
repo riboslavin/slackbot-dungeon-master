@@ -29,29 +29,14 @@ module.exports = function (req, res, next) {
       for (var level in obj.spellbook.Derfin) {
         output += "*Level " + level + ":*\n";
         output += obj.spellbook.Derfin.Zero;
-        //for (var spell in obj.spellbook.Derfin[level]) {
-        //  output += spell + "\n";
-        //}
+        //characterOutput("Derfin");
       }
       break;
     case "jack":
-      output = "";
-      for (var level in obj.spellbook.Jack) {
-        output += "*Level " + level + ":*\n";
-        for (var spell in obj.spellbook.Jack[level]) {
-          output += spell + "\n";
-        }
-      }
+      characterOutput("Jack");
       break;
     case "tor":
       characterOutput("Tor");
-      // output = "";
-      // for (var level in obj.spellbook.Tor) {
-      //   output += "*Level " + level + ":*\n";
-      //   for (var spell in obj.spellbook.Tor[level]) {
-      //     output += spell + "\n";
-      //   }
-      // }
       break;
     case "eldritch blast":
       spellOutput("Tor", "Zero", "Eldritch Blast");
