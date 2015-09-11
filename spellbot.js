@@ -29,7 +29,7 @@ module.exports = function (req, res, next) {
   }
 
   // write response message and add to payload
-  botPayload.text = req.body.user_name + ' requested ' + command + ':\n' + output;
+  botPayload.text = req.body.user_name + ' requested \"' + command + '\":\n' + output;
 
   botPayload.username = 'spellbot';
   botPayload.channel = req.body.channel_id;
