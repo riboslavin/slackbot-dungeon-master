@@ -15,15 +15,16 @@ module.exports = function (req, res, next) {
     //convert captures to variables
     if (matches && matches[1]) {
       command = matches[1];
+      lowerCommand = command.toLowerCase();
     } else {
       // send error message back to user if input is bad
-      return res.status(200).send('Enter a single character name or spell name, case-sensitive.');
+      return res.status(200).send('Enter a single character name or spell name, case-insensitive.');
     }
   }
   
   //define individual command behavior
-  switch (command) {
-    case "Derfin":
+  switch (lowerCommand) {
+    case "derfin":
       output = "";
       for (var level in obj.spellbook.Derfin) {
         output += "*Level " + level + ":*\n";
@@ -33,7 +34,7 @@ module.exports = function (req, res, next) {
         //}
       }
       break;
-    case "Jack":
+    case "jack":
       output = "";
       for (var level in obj.spellbook.Jack) {
         output += "*Level " + level + ":*\n";
@@ -42,7 +43,7 @@ module.exports = function (req, res, next) {
         }
       }
       break;
-    case "Tor":
+    case "tor":
       output = "";
       for (var level in obj.spellbook.Tor) {
         output += "*Level " + level + ":*\n";
