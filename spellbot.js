@@ -31,7 +31,7 @@ module.exports = function (req, res, next) {
       output = "";
       for (var level in obj.spellbook.Jack) {
         output += "Level " + level + ":\n";
-        for (var spell in obj.spellbook.Jack.One) {
+        for (var spell in obj.spellbook.Jack[level]) {
           output += spell + "\n";
         }
       }
