@@ -1,10 +1,10 @@
 {
 	"spellbook": {
 		"Derfin": {
-			"1": "No spells known. Have you tried shooting arrows at it while doing a backflip?"
+			"One": "No spells known. Have you tried shooting arrows at it while doing a backflip?"
 		},
 		"Jack": {
-			"1": {
+			"One": {
 				"Bless": {
 					"Type": "Enchantment",
 					"Casting Time": "1 action",
@@ -17,7 +17,7 @@
 			}
 		},
 		"Tor": {
-			"1": {
+			"One": {
 
 			}
 		}

@@ -23,7 +23,7 @@ module.exports = function (req, res, next) {
   //define individual command behavior
   switch (command) {
     case "Derfin":
-      output = obj.spellbook.Derfin.1 + '\n';
+      output = obj.spellbook.Derfin.One + '\n';
       break;
   }
 
