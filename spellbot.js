@@ -24,7 +24,17 @@ module.exports = function (req, res, next) {
   //define individual command behavior
   switch (command) {
     case "Derfin":
+      output = "";
       output = obj.spellbook.Derfin.One + '\n';
+      break;
+    case "Jack":
+      output = "";
+      for level in obj.spellbook.Jack {
+        output += level + ":\n";
+        for spell in obj.spellbook.Jack.level {
+          output += spell + "\n";
+        }
+      }
       break;
   }
 
