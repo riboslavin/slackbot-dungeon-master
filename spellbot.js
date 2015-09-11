@@ -24,28 +24,31 @@ module.exports = function (req, res, next) {
   //define individual command behavior
   switch (command) {
     case "Derfin":
+      var character = "Derfin";
       output = "";
-      for (var level in obj.spellbook.Jack) {
+      for (var level in obj.spellbook[character]) {
         output += "Level " + level + ":\n";
-        for (var spell in obj.spellbook.Jack[level]) {
+        for (var spell in obj.spellbook[character][level]) {
           output += spell + "\n";
         }
       }
       break;
     case "Jack":
+      var character = "Jack";
       output = "";
-      for (var level in obj.spellbook.Jack) {
+      for (var level in obj.spellbook[character]) {
         output += "Level " + level + ":\n";
-        for (var spell in obj.spellbook.Jack[level]) {
+        for (var spell in obj.spellbook[character][level]) {
           output += spell + "\n";
         }
       }
       break;
     case "Tor":
+      var character = "Tor";
       output = "";
-      for (var level in obj.spellbook.Jack) {
+      for (var level in obj.spellbook[character]) {
         output += "Level " + level + ":\n";
-        for (var spell in obj.spellbook.Jack[level]) {
+        for (var spell in obj.spellbook[character][level]) {
           output += spell + "\n";
         }
       }
