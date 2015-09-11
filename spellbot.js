@@ -25,12 +25,9 @@ module.exports = function (req, res, next) {
   //define individual command behavior
   switch (lowerCommand) {
     case "derfin":
-      output = "";
-      for (var level in obj.spellbook.Derfin) {
-        output += "*Level " + level + ":*\n";
-        output += obj.spellbook.Derfin.Zero;
-        //characterOutput("Derfin");
-      }
+      output += "*Level 0:*\n";
+      output += obj.spellbook.Derfin.Zero + "\n";
+      //characterOutput("Derfin");
       break;
     case "jack":
       characterOutput("Jack");
