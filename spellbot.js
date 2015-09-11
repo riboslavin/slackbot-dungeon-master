@@ -53,12 +53,19 @@ module.exports = function (req, res, next) {
       }
       break;
     case "eldritch blast":
-      output = "";
-      var spell = "Eldritch Blast";
-      output += '*' + spell + '*:\n';
-      for (var key in obj.spellbook.Tor.Zero[spell]) {
-        output += '*' + key + '*: ' + obj.spellbook.Tor.Zero[spell][key] + '\n';
-      }
+      spellOutput("Tor", "Zero", "Eldritch Blast");
+      // output += '*' + spell + '*:\n';
+      // for (var key in obj.spellbook.Tor.Zero[spell]) {
+      //   output += '*' + key + '*: ' + obj.spellbook.Tor.Zero[spell][key] + '\n';
+      // }
+  }
+
+  function spellOutput(character, level, spell) {
+    output = "";
+    output += '*' + spell + '*:\n';
+    for (var key in obj.spellbook[character][level][spell]) {
+      output += '*' + key + '*: ' + obj.spellbook[character][level][spell][key] + '\n';
+    }
   }
 
   // write response message and add to payload
