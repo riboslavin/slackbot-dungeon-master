@@ -30,9 +30,10 @@ module.exports = function (req, res, next) {
     case "Jack":
       output = "";
       for (var i = 0, len = obj.spellbook.Jack.length; i < len; i++) {
+        level = obj.spellbook.Jack[i];
         output += level + ":\n";
         for (var j = 0, len2 = obj.spellbook.Jack.level.length; j < len2; j++) {
-          output += spell + "\n";
+          output += obj.spellbook.Jack.level[j] + "\n";
         }
       }
       break;
