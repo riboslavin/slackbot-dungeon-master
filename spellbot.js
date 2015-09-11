@@ -10,7 +10,7 @@ module.exports = function (req, res, next) {
 
   if (req.body.text) {
     // regex match
-    matches = req.body.text.match(/^([a-zA-Z]{1,})$/);
+    matches = req.body.text.match(/^([a-zA-Z\s]{1,})$/);
 
     //convert captures to variables
     if (matches && matches[1]) {

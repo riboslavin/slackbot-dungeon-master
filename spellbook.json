@@ -17,8 +17,24 @@
 			}
 		},
 		"Tor": {
-			"One": {
+			"Zero": {
+				"Eldritch Blast": {
 
+				},
+				"Chill Touch": {
+
+				},
+				"Thaumaturgy": {
+
+				}
+			},
+			"One": {
+				"Armor of Agathys": {
+
+				},
+				"Witch Bolt": {
+					
+				}
 			}
 		}
 	}
