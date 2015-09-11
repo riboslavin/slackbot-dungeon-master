@@ -57,7 +57,7 @@ module.exports = function (req, res, next) {
       var spell = "Eldritch Blast";
       output += '*' + spell + '*:\n';
       for (var key in obj.spellbook.Tor.Zero[spell]) {
-        output += key + ': ' + obj.spellbook.Tor.One[spell][key] + '\n';
+        output += key + ': ' + obj.spellbook.Tor.Zero[spell][key] + '\n';
       }
   }
 
