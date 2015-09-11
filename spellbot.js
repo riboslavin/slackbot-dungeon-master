@@ -29,9 +29,9 @@ module.exports = function (req, res, next) {
       break;
     case "Jack":
       output = "";
-      for level in obj.spellbook.Jack {
+      for (var i = 0, len = obj.spellbook.Jack.length; i < len; i++) {
         output += level + ":\n";
-        for spell in obj.spellbook.Jack.level {
+        for (var j = 0, len2 = obj.spellbook.Jack.level.length; j < len2; j++) {
           output += spell + "\n";
         }
       }
