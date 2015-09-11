@@ -2,6 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var hellobot = require('./hellobot');
 var dicebot = require('./dicebot');
+var spellbot = require('./spellbot');
 var pg = require('pg');
 
 var app = express();
@@ -40,3 +41,6 @@ app.post('/hello', hellobot);
 
 // dicebot
 app.post('/roll', dicebot);
+
+// spellbot
+app.post('/spell', spellbot);
