@@ -25,9 +25,23 @@ module.exports = function (req, res, next) {
   switch (command) {
     case "Derfin":
       output = "";
-      output = obj.spellbook.Derfin.One + '\n';
+      for (var level in obj.spellbook.Jack) {
+        output += "Level " + level + ":\n";
+        for (var spell in obj.spellbook.Jack[level]) {
+          output += spell + "\n";
+        }
+      }
       break;
     case "Jack":
+      output = "";
+      for (var level in obj.spellbook.Jack) {
+        output += "Level " + level + ":\n";
+        for (var spell in obj.spellbook.Jack[level]) {
+          output += spell + "\n";
+        }
+      }
+      break;
+    case "Tor":
       output = "";
       for (var level in obj.spellbook.Jack) {
         output += "Level " + level + ":\n";
