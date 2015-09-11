@@ -44,20 +44,18 @@ module.exports = function (req, res, next) {
       }
       break;
     case "tor":
-      output = "";
-      for (var level in obj.spellbook.Tor) {
-        output += "*Level " + level + ":*\n";
-        for (var spell in obj.spellbook.Tor[level]) {
-          output += spell + "\n";
-        }
-      }
+      characterOutput("Tor");
+      // output = "";
+      // for (var level in obj.spellbook.Tor) {
+      //   output += "*Level " + level + ":*\n";
+      //   for (var spell in obj.spellbook.Tor[level]) {
+      //     output += spell + "\n";
+      //   }
+      // }
       break;
     case "eldritch blast":
       spellOutput("Tor", "Zero", "Eldritch Blast");
-      // output += '*' + spell + '*:\n';
-      // for (var key in obj.spellbook.Tor.Zero[spell]) {
-      //   output += '*' + key + '*: ' + obj.spellbook.Tor.Zero[spell][key] + '\n';
-      // }
+      break;
   }
 
   function spellOutput(character, level, spell) {
@@ -65,6 +63,16 @@ module.exports = function (req, res, next) {
     output += '*' + spell + '*:\n';
     for (var key in obj.spellbook[character][level][spell]) {
       output += '*' + key + '*: ' + obj.spellbook[character][level][spell][key] + '\n';
+    }
+  }
+
+  function characterOutput(character) {
+    output = "";
+    for (var level in obj.spellbook[character]) {
+      output += "*Level " + level + ":*\n";
+      for (var spell in obj.spellbook[character][level]) {
+        output += spell + "\n";
+      }
     }
   }
 
