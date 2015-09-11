@@ -6,6 +6,7 @@ module.exports = function (req, res, next) {
   var command = "Derfin"; //default command lists Derfin's spells
   var output = "Default output";
   var obj = JSON.parse(fs.readFileSync('spellbook.json', 'utf8'));
+  var botPayload = {};
 
   if (req.body.text) {
     // regex match
