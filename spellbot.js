@@ -28,7 +28,7 @@ module.exports = function (req, res, next) {
       output = "";
       for (var level in obj.spellbook.Derfin) {
         output += "*Level " + level + ":*\n";
-        output += obj.spellbook.Derfin.One;
+        output += obj.spellbook.Derfin.Zero;
         //for (var spell in obj.spellbook.Derfin[level]) {
         //  output += spell + "\n";
         //}

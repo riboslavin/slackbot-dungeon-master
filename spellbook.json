@@ -1,7 +1,7 @@
 {
 	"spellbook": {
 		"Derfin": {
-			"One": "No spells known. Have you tried shooting arrows at it while doing a backflip?"
+			"Zero": "No spells known. Have you tried shooting arrows at it while doing a backflip?"
 		},
 		"Jack": {
 			"One": {
@@ -33,7 +33,7 @@
 
 				},
 				"Witch Bolt": {
-					
+
 				}
 			}
 		}
