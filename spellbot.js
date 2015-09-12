@@ -28,7 +28,7 @@ module.exports = function (req, res, next) {
     case "Tor":
       characterOutput(command);
       break;
-    else:
+    default:
       spellOutput(command);
       break;
   }
