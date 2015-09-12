@@ -22,10 +22,10 @@ module.exports = function (req, res, next) {
   }
   
   //define individual command behavior
-  switch (command) {
-    case "Derfin":
-    case "Jack":
-    case "Tor":
+  switch((command).val().toLowerCase()) {
+    case "derfin":
+    case "jack":
+    case "tor":
       characterOutput(command);
       break;
     default:
