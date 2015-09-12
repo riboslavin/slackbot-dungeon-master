@@ -35,7 +35,7 @@ module.exports = function (req, res, next) {
 
   function spellOutput(spell) {
     output = "";
-    output += '*' + spell + '*:\n';
+    output += '*' + spell + '*\n';
     for (var key in obj.spellbook[spell]) {
       output += '*' + key + '*: ' + obj.spellbook[spell][key] + '\n';
     }
