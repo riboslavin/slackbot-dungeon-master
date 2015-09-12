@@ -1,71 +1,76 @@
 {
-	"spellbook": {
+	"spell_list": {
 		"Derfin": {
-			"Zero": "No spells known. Have you tried shooting arrows at it while doing a backflip?"
+			"Level 0": {"No spells known. Have you tried shooting arrows at it while doing a backflip?":}
 		},
 		"Jack": {
-			"One": {
-				"Bless": {
-					"Type": "Enchantment",
-					"Casting Time": "1 action",
-					"Range": "30 feet",
-					"Components": "V, S, M (a sprinkling of holy water)",
-					"Duration": "Concentration, up to 1 minute",
-					"Description": "You bless up to three creatures of your choice within range. Whenever a target makes an attack roll or a saving throw before the spell ends, the target can roll a d4 and add the number rolled to the attack roll or saving throw.",
-					"At Higher Levels": "When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st."
-				}
-			}
+			"Level 0": {"No spells known. Welp.":} 
 		},
 		"Tor": {
-			"Zero": {
-				"Eldritch Blast": {
-					"Type": "Evocation, Cantrip",
-					"Casting Time": "1 action",
-					"Range": "120 feet",
-					"Components": "V, S",
-					"Duration": "Instantaneous",
-					"Description": "A beam of crackling energy streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 force damage.",
-					"At Higher Levels": "The spell creates more than one beam when you reach higher levels: two beams at 5th level, three beams at 11th level, and four beams at 17th level. You can direct the beams at the same target or at different ones. Make a separate attack roll for each beam."
-				},
-				"Chill Touch": {
-					"Type": "",
-					"Casting Time": "",
-					"Range": "",
-					"Components": "",
-					"Duration": "",
-					"Description": "",
-					"At Higher Levels": ""
-				},
-				"Thaumaturgy": {
-					"Type": "",
-					"Casting Time": "",
-					"Range": "",
-					"Components": "",
-					"Duration": "",
-					"Description": "",
-					"At Higher Levels": ""
-				}
-			},
-			"One": {
-				"Armor of Agathys": {
-					"Type": "",
-					"Casting Time": "",
-					"Range": "",
-					"Components": "",
-					"Duration": "",
-					"Description": "",
-					"At Higher Levels": ""
-				},
-				"Witch Bolt": {
-					"Type": "",
-					"Casting Time": "",
-					"Range": "",
-					"Components": "",
-					"Duration": "",
-					"Description": "",
-					"At Higher Levels": ""
-				}
-			}
+			"Level 0": {"Eldritch Blast":, "Chill Touch":, "Thaumaturgy":},
+			"Level 1": {"Armor of Agathys":,"Witch Bolt":}
+		}
+	},
+	"spellbook": {
+		"Armor of Agathys": {
+			"Level": "1",
+			"Type": "",
+			"Casting Time": "",
+			"Range": "",
+			"Components": "",
+			"Duration": "",
+			"Description": "",
+			"At Higher Levels": ""
+		},
+		"Bless": {
+			"Level": "1",
+			"Type": "Enchantment",
+			"Casting Time": "1 action",
+			"Range": "30 feet",
+			"Components": "V, S, M (a sprinkling of holy water)",
+			"Duration": "Concentration, up to 1 minute",
+			"Description": "You bless up to three creatures of your choice within range. Whenever a target makes an attack roll or a saving throw before the spell ends, the target can roll a d4 and add the number rolled to the attack roll or saving throw.",
+			"At Higher Levels": "When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st."
+		},
+		"Chill Touch": {
+			"Level": "0",
+			"Type": "",
+			"Casting Time": "",
+			"Range": "",
+			"Components": "",
+			"Duration": "",
+			"Description": "",
+			"At Higher Levels": ""
+		},
+		"Eldritch Blast": {
+			"Level": "0",
+			"Type": "Evocation",
+			"Casting Time": "1 action",
+			"Range": "120 feet",
+			"Components": "V, S",
+			"Duration": "Instantaneous",
+			"Description": "A beam of crackling energy streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 force damage.",
+			"At Higher Levels": "The spell creates more than one beam when you reach higher levels: two beams at 5th level, three beams at 11th level, and four beams at 17th level. You can direct the beams at the same target or at different ones. Make a separate attack roll for each beam."
+		},
+		"Thaumaturgy": {
+			"Level": "0",
+			"Type": "",
+			"Casting Time": "",
+			"Range": "",
+			"Components": "",
+			"Duration": "",
+			"Description": "",
+			"At Higher Levels": ""
+		},
+		"Witch Bolt": {
+			"Level": "1",
+			"Type": "",
+			"Casting Time": "",
+			"Range": "",
+			"Components": "",
+			"Duration": "",
+			"Description": "",
+			"At Higher Levels": ""
 		}
 	}
 }
