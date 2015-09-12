@@ -39,6 +39,7 @@ module.exports = function (req, res, next) {
     for (var key in obj.spellbook[spell]) {
       output += '*' + key + '*: ' + obj.spellbook[spell][key] + '\n';
     }
+    //probably a better way to process spell not found?
     if (output === '*' + spell + '*:\n')
       output = "Spell not found.";
   }
