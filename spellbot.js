@@ -51,7 +51,7 @@ module.exports = function (req, res, next) {
   function characterOutput(character) {
     output = "";
     for (var level in obj.spell_list[character]) {
-      output += "*" + level + ":*\n";
+      output += "*Level " + level + ":*\n";
       for (var spell in obj.spellbook[character][level]) {
         output += spell + "\n";
       }

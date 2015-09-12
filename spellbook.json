@@ -1,14 +1,14 @@
 {
 	"spell_list": {
 		"Derfin": {
-			"Level 0": {"No spells known. Have you tried shooting arrows at it while doing a backflip?": ""}
+			"Zero": {"No spells known. Have you tried shooting arrows at it while doing a backflip?": ""}
 		},
 		"Jack": {
-			"Level 0": {"No spells known. Welp.": ""} 
+			"Zero": {"No spells known. Welp.": ""} 
 		},
 		"Tor": {
-			"Level 0": {"Eldritch Blast": "", "Chill Touch": "", "Thaumaturgy": ""},
-			"Level 1": {"Armor of Agathys": "","Witch Bolt": ""}
+			"Zero": {"Eldritch Blast": "", "Chill Touch": "", "Thaumaturgy": ""},
+			"One": {"Armor of Agathys": "","Witch Bolt": ""}
 		}
 	},
 	"spellbook": {
